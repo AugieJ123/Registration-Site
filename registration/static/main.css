@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-header, .navbar {
+    /* Style for "Rectangle" */
+background-color: #3ac256;
+color: white;
+}
+
+ul, .navbar-brand {
+color: #ffffff;
+font-family: Arsenal;
+font-size: 20px;
+font-weight: 250;
+}
+
+.introduction {
+    /* Style for "New to thi" */
+    opacity: 0.79;
+    color: #191313;
+    font-family: "Agency FB";
+    font-size: 35px;
+    font-weight: 400;
+}
+
+#login {
+    /* Style for "Rectangle" */
+    box-shadow: 10px 5px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
+    background-color: #fefcfc;
+}
+
+legend {
+    text-align: center;
+    font-size: 400px;
+    font-weight: 100px;
+}
+
+#inputPassword6, #exampleInputEmail1 {
+    /* Style for "Rectangle" */
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    border-radius: 43px;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+}
+
+.button {
+    /* Style for "Rectangle" */
+    width: 233px;
+    height: 50px;
+    border-radius: 70px;
+    border: 1px solid #707070;
+    background-color: #3ea426;
+}

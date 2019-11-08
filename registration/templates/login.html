@@ -1,0 +1,46 @@
+{% extends 'layout.html' %}
+
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div class="container" id="login">
+                    <form class="form-inline">
+                        <fieldset class="form-group">
+                            <legend class="border-bottom mb-4">LOG IN</legend>
+                            <div class="form-group justify-content-center">
+                                <div class="row col-sm-4 col-md-4 col-lg-10">
+                                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                                </div>
+                            </div>
+                           <br>
+                            <div class="form-group justify-content-center">
+                                <div class="row col-sm-4 col-md-4 col-lg-10">
+                                  <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Enter password">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="border-top pt-6">
+                                <small class="text-muted">
+                                    <a class="ml-2" href="">Forget Password?</a>
+                                </small>
+                            </div>
+                            <br>
+                            <div class="row justify-content-center">
+                                <button type="button" class="btn btn-outline-success button">SIGN IN</button>
+                            </div>
+
+                            <div class="border-top pt-3">
+                                <small class="text-muted">
+                                    Need An Account? <a class="ml-2" href="" >Sign Up Now</a>
+                                </small>
+                            </div>
+                          </fieldset>
+                      </form>
+                </div>
+          </div>
+        </div>
+    </div>
+
+
+{% endblock %}

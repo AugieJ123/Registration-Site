@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block content %}
+          <div class="col-sm-8 col-md-8">
+            <div class="container">
+              <div class="introduction">
+                  <p>
+                      New to this site ? Make sure you login to your account and if you don't have an account you can click on register to create an account.
+                  </p>
+
+                  <p>
+                      If you're a students before registering, make sure you have paid your fees and you have process it from Finance office. You can use the Serial Key the gave you in finance office to complete your registration.
+                  </p>
+
+                  <p>
+                    For staffs, use the account information given to you to login into your accounts. If you don't have the information contact the dean of faculty.
+                  </p>
+
+                </div>
+
+             </div>
+          </div>
+
+           <div class="col-sm-4 col-md-4">
+               <div class="container" id="login">
+                   <form class="form-inline" method="POST">
+                       {{ form.hidden_tag() }}
+                       <fieldset class="form-group">
+                           <legend class="border-bottom mb-4">LOG IN</legend>
+                           <div class="form-group justify-content-center">
+                               <div class="row col-sm-4 col-md-4 col-lg-10">
+                                   {{ form.email.label(class='form-control', id='exampleInputEmail1') }}
+
+                                   <!-- Validation Errors -->
+                                   {% if form.email.errors %}
+                                       {{ form.email(class='form-control is-invalid', id='exampleInputEmail1') }}
+                                        <div class="invalid-feedback">
+                                           {% for error in form.email.errors %}
+                                               <span>{{ error }}</span>
+                                           {% endfor %}
+                                       </div>
+                                   {% else %}
+                                       {{ form.email(class='form-control', id='exampleInputEmail1') }}
+                                   {% endif %}
+                               </div>
+                           </div>
+                           <br>
+                           <div class="form-group justify-content-center">
+                               <div class="row col-sm-4 col-md-4 col-lg-10">
+                                   {{ form.password.label(class='form-control', id='exampleInputPassword6') }}
+
+                                   <!-- Validation Errors -->
+                                   {% if form.password.errors %}
+                                       {{ form.email(class='form-control is-invalid', id='exampleInputPassword6') }}
+                                        <div class="invalid-feedback">
+                                            {% for error in form.password.errors %}
+                                                <span>{{ error }}</span>
+                                            {% endfor %}
+                                        </div>
+                                   {% else %}
+                                       {{ form.email(class='form-control', id='exampleInputPassword6') }}
+                                   {% endif %}
+                               </div>
+                           </div>
+                           <br>
+                           <div class="border-top pt-6">
+                               <small class="text-muted">
+                                   <a class="ml-2" href="{{ url_for('') }}">Forget Password?</a>
+                               </small>
+                           </div>
+                           <br>
+                           <div class="row justify-content-center">
+                               <div class="form-group">
+                                   {{ form.submit(class='btn btn-outline-success button') }}
+                               </div>
+                           </div>
+                           <div class="border-top pt-3">
+                               <small class="text-muted">
+                                   Need An Account? <a class="ml-2" href="{{ url_for('register')}}" >Sign Up Now</a>
+                               </small>
+                           </div>
+                            </fieldset>
+                          </form>
+                    </div>
+                  </div>
+
+{%  endblock content %}
